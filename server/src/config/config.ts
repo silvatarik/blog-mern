@@ -1,7 +1,15 @@
 const config = {
     mongo:{
-        options:{},
-        url:`mongodb+srv://silvatarik:Saturno*@cluster0.wt8dq.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`
+        options:{
+            useUnifiedTopology:true,
+            useNewUrlParser:true,
+            socketTimeout:30000,
+            keepAlive:true,
+            poolSize:50,
+            autoIndex:false,
+            retryWrites:false
+        },
+        url:`mongodb+srv://silvatarik:Saturno*@cluster0.wt8dq.mongodb.net/myFirstDatabase`
     },
     server: {
        host:'localhost',
